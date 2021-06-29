@@ -1,11 +1,26 @@
-a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-b = [1,2,3,4,5,6,7,8,9,10,11, 12,13]
-ab = []
-#userInput = input("do you want the lists randomized? yes/no")
-#if userInput == "yes":
-  #for element in a:#
-for element in a:
-  if element in b:
-    if element not in ab:
-     ab.append(element)
-print(ab)
+import random
+list1 = [1]
+for i in range(random.randrange(5, 15)):
+    list1.append(list1[-1]+random.randrange(1, 8))
+    print(list1)
+list2 = [1]
+for i in range(random.randrange(5, 15)):
+    list2.append(list2[-1]+random.randrange(1, 8))
+    print(list2)
+same_char = []
+element = 0
+if len(list1) > len(list2):
+    for i in list1:
+        print(element)
+        if list1[element] in list2 and list1[element] not in same_char:
+            same_char.append(list1[element])
+            print(same_char, "list1")
+        element = element+1
+else:
+    for i in list2:
+        print(element)
+        if list2[element] in list1 and list2[element] not in same_char:
+                same_char.append(list1[element])
+                print(same_char, "list2")
+        element = element+1
+print(same_char)
