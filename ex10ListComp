@@ -7,20 +7,21 @@ list2 = [1]
 for i in range(random.randrange(5, 15)):
     list2.append(list2[-1]+random.randrange(1, 8))
     print(list2)
+print(list2)
 same_char = []
 element = 0
 if len(list1) > len(list2):
     for i in list1:
-        print(element)
-        if list1[element] in list2 and list1[element] not in same_char:
-            same_char.append(list1[element])
+        print(i)
+        if i in list2 and i not in same_char:
+            same_char.append(i)
             print(same_char, "list1")
-        element = element+1
+        element = i+1
 else:
     for i in list2:
         print(element)
-        if list2[element] in list1 and list2[element] not in same_char:
-                same_char.append(list1[element])
+        if i in list1 and i not in same_char:
+                same_char.append(i)
                 print(same_char, "list2")
-        element = element+1
+        element = i+1
 print(same_char)
